@@ -8,5 +8,25 @@
   </head>
   <body>
     <h1>Accordéon mémorisant par un nombre l'élèment ouvert</h1>
+    <div class="accordeon" x-data="{isOpen:false}">
+      <section >
+        <button  @click="isOpen = !isOpen">bouton 1</button>
+        <p x-show="isOpen" x-transition>
+          <lo>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Doloremque sapiente odit in nam eaque rerum, autem velit? Natus dolor similique facilis, nisi, quos sit quidem nam quasi atque quas eveniet.</lo>
+        </p>
+      </section>
+      <section>
+        <button  @click="isOpen = !isOpen">bouton 2</button>
+        <p x-show="isOpen" x-transition>
+          <lo>Iure obcaecati possimus odit sapiente voluptatem aperiam ipsa quaerat quo vero, perferendis autem illum quis consequuntur sequi sint deleniti saepe voluptatibus dicta repudiandae quibusdam debitis mollitia recusandae! Praesentium, molestias est</lo>
+        </p>
+      </section>
+      <section>
+        <button @click="isOpen = !isOpen">bouton 3</button>
+        <p x-show="isOpen" x-transition>
+          <lo>Adipisci maxime ad est sequi necessitatibus. Officia cumque repellat suscipit inventore quasi, iure delectus explicabo iusto voluptas? Asperiores mollitia recusandae adipisci, non ab, aperiam autem enim molestiae similique consequuntur fugit!</lo>
+        </p>
+      </section>
+    </div>
   </body>
 </html>
