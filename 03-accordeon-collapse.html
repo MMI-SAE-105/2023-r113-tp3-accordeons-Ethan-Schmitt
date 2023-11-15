@@ -10,22 +10,22 @@
   </head>
   <body>
     <h1>Accordéon avec <code>x-collapse</code></h1>
-    <div class="accordeon" x-data="{isOpen:0}">
+    <div class="accordeon" x-data="{expanded:0}">
       <section >
-        <button  @click="isOpen = 1 ">bouton 1</button>
-        <p x-show="isOpen=== 1" x-transition.scale.origin.left>
+        <button  @click="expanded = 1 ">bouton 1</button>
+        <p x-show="expanded=== 1"  x-collapse>
           <lo>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Doloremque sapiente odit in nam eaque rerum, autem velit? Natus dolor similique facilis, nisi, quos sit quidem nam quasi atque quas eveniet.</lo>
         </p>
       </section>
       <section>
-        <button  @click="isOpen = 2 ">bouton 2</button>
-        <p x-show="isOpen=== 2" x-transition.scale.origin.left>
+        <button  @click="expanded = 2 ">bouton 2</button>
+        <p x-show="expanded=== 2"  x-collapse>
           <lo>Iure obcaecati possimus odit sapiente voluptatem aperiam ipsa quaerat quo vero, perferendis autem illum quis consequuntur sequi sint deleniti saepe voluptatibus dicta repudiandae quibusdam debitis mollitia recusandae! Praesentium, molestias est</lo>
         </p>
       </section>
       <section>
-        <button @click="isOpen = 3 ">bouton 3</button>
-        <p x-show="isOpen===3" x-transition.scale.origin.left>
+        <button @click="expanded = 3 ">bouton 3</button>
+        <p x-show="expanded===3"  x-collapse>
           <lo>Adipisci maxime ad est sequi necessitatibus. Officia cumque repellat suscipit inventore quasi, iure delectus explicabo iusto voluptas? Asperiores mollitia recusandae adipisci, non ab, aperiam autem enim molestiae similique consequuntur fugit!</lo>
         </p>
       </section>
