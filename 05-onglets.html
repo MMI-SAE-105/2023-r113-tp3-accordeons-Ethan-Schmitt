@@ -1,64 +1,68 @@
   <!DOCTYPE html>
-    <html lang="fr">
-      <head>
-        <meta charset="UTF-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
-        <title>Onglets</title>
-      </head>
-      <style>
+  <html lang="fr">
+    <head>
+      <meta charset="UTF-8" />
+      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+      <title>Onglets</title>
+    </head>
+    <style>
       #onglets {
-      position: relative;
-      width: 100%;
-      height: 100%;
-    }
+        position: relative;
+        width: 100%;
+        height: 100%;
+      }
 
-    .panels {
-      position: relative;
-      width: 100%;
-      height: 100%;
-    }
+      .panels {
+        position: relative;
+        width: 100%;
+        height: 100%;
+      }
 
-    .panel {
-      position: absolute;
-      top: 0;
-      left: 0;
-      opacity: 0;
-      transition: opacity 1s;
-    }
+      .panel {
+        position: absolute;
+        top: 0;
+        left: 0;
+        opacity: 0;
+        transition: opacity 1s;
+      }
 
-    .panel.active {
-      opacity: 1;
-    }
-        </style>
-        <body>
-          <div id="onglets" x-data="{ estOuvert: 0, }">
-            <h1>Onglets</h1>
-            <ul role="tablist">
-              <section>
-                <button role="tab" class="tab" :class="{ 'active': estOuvert === 1 }" @click="estOuvert = 1">Onglet 1</button>
-                <button role="tab" class="tab" :class="{ 'active': estOuvert === 2 }" @click="estOuvert = 2">Onglet 2</button>
-                <button role="tab" class="tab" :class="{ 'active': estOuvert === 3 }" @click="estOuvert = 3">Onglet 3</button>
-              </section>
-            </ul>
-              
-              <div class="panels">
-              <div role="tabpanel" :class="{ 'active': estOuvert === 1 }" class="panel" >
-                <h1>Panneau 1</h1>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur et aliquam magnam aut dolor error pariatur iure ad totam iusto voluptatem consequuntur harum delectus quisquam accusamus dolore in, magni eius.</p>
-              </div>
-              <div role="tabpanel" :class="{ 'active': estOuvert === 2 }" class="panel" >
-                <h1>Panneau 2</h1>
-                <p>Excepturi iste, pariatur sint quo nulla nisi placeat. Id fugit aliquam esse dicta reprehenderit corporis officia consectetur voluptates debitis nihil placeat, iure itaque nobis ipsam commodi perspiciatis, impedit eaque ratione?</p>
-              </div>
-              <div role="tabpanel" :class="{ 'active': estOuvert === 3 }" class="panel">
-                <h1>Panneau 3</h1>
-                <p>Nulla, voluptatem fuga autem, qui nemo incidunt hic dignissimos obcaecati ea soluta iure nostrum quae deserunt, fugit nesciunt voluptas animi. Molestiae, perspiciatis quisquam. Perferendis excepturi accusantium ea perspiciatis nobis sapiente.</p>
-              </div>
-            </div>
-            </ul>
+      .panel.active {
+        opacity: 1;
+      }
+
+      .tab.active {
+        background-color: #ccc;
+      }
+    </style>
+    <body>
+      <div id="onglets" x-data="{ estOuvert: 0, }">
+        <h1>Onglets</h1>
+        <ul role="tablist">
+          <section>
+            <button role="tab" class="tab" :class="{ 'active': estOuvert === 1 }" @click="estOuvert = 1">Onglet 1</button>
+            <button role="tab" class="tab" :class="{ 'active': estOuvert === 2 }" @click="estOuvert = 2">Onglet 2</button>
+            <button role="tab" class="tab" :class="{ 'active': estOuvert === 3 }" @click="estOuvert = 3">Onglet 3</button>
+          </section>
+        </ul>
+
+        <div class="panels">
+          <div role="tabpanel" :class="{ 'active': estOuvert === 1 }" class="panel">
+            <h1>Panneau 1</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur et aliquam magnam aut dolor error pariatur iure ad totam iusto voluptatem consequuntur harum delectus quisquam accusamus dolore in, magni eius.</p>
           </div>
-        </body>
-      </html>
+          <div role="tabpanel" :class="{ 'active': estOuvert === 2 }" class="panel">
+            <h1>Panneau 2</h1>
+            <p>Excepturi iste, pariatur sint quo nulla nisi placeat. Id fugit aliquam esse dicta reprehenderit corporis officia consectetur voluptates debitis nihil placeat, iure itaque nobis ipsam commodi perspiciatis, impedit eaque ratione?</p>
+          </div>
+          <div role="tabpanel" :class="{ 'active': estOuvert === 3 }" class="panel">
+            <h1>Panneau 3</h1>
+            <p>Nulla, voluptatem fuga autem, qui nemo incidunt hic dignissimos obcaecati ea soluta iure nostrum quae deserunt, fugit nesciunt voluptas animi. Molestiae, perspiciatis quisquam. Perferendis excepturi accusantium ea perspiciatis nobis sapiente.</p>
+          </div>
+        </div>
+        </ul>
+      </div>
+    </body>
+  </html>
 
