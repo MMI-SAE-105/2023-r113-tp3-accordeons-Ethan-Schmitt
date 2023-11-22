@@ -8,13 +8,30 @@
     <title>Onglets</title>
   </head>
   <body>
-    <div id="onglets" x-data="{ouvert : 1, }">
+    <div id="onglets" x-data="{ouvert : 0, }">
     <h1>Onglets</h1>
       <ul role="tablist">
-        <li role="tab">Onglet 1</li>
-        <li role="tab">Onglet 2</li>
-        <li role="tab">Onglet 3</li>
+        
+        <section >
+        <button @click="ouvert = 1">1</button>
+        <li role="tab" x-show="ouvert === 1">Onglet 1</li>
+        </section>
+       
+        <section >
+        <button @click="ouvert = 2">2</button>
+        <li role="tab" x-show="ouvert === 2">Onglet 2</li>
+        </section>
+        
+        <section >
+        <button @click="ouvert = 3"> 3</button>
+        <li role="tab" x-show="ouvert === 3">Onglet 3</li>
+        </section>
+        
+        <section >
+        <button @click="ouvert = 4">4</button>
+        <li role="tab" x-show="ouvert === 4">Onglet 4</li>
+        </section>
+      
       </ul>
-     
-  </body>
+   </body>
 </html>
