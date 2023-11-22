@@ -38,25 +38,21 @@
             <ul role="tablist">
               <section>
                 <button role="tab" class="tab" :class="{ 'active': estOuvert === 1 }" @click="estOuvert = 1">Onglet 1</button>
-              </section>
-              <section>
                 <button role="tab" class="tab" :class="{ 'active': estOuvert === 2 }" @click="estOuvert = 2">Onglet 2</button>
-              </section>
-              <section>
                 <button role="tab" class="tab" :class="{ 'active': estOuvert === 3 }" @click="estOuvert = 3">Onglet 3</button>
               </section>
             </ul>
               
               <div class="panels">
-              <div role="tabpanel" :class="{ actif: estOuvert === 1 }" class=".panel" >
+              <div role="tabpanel" :class="{ 'active': estOuvert === 1 }" class="panel" >
                 <h1>Panneau 1</h1>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur et aliquam magnam aut dolor error pariatur iure ad totam iusto voluptatem consequuntur harum delectus quisquam accusamus dolore in, magni eius.</p>
               </div>
-              <div role="tabpanel" :class="{ actif: estOuvert === 2 }" class=".panel" >
+              <div role="tabpanel" :class="{ 'active': estOuvert === 2 }" class="panel" >
                 <h1>Panneau 2</h1>
                 <p>Excepturi iste, pariatur sint quo nulla nisi placeat. Id fugit aliquam esse dicta reprehenderit corporis officia consectetur voluptates debitis nihil placeat, iure itaque nobis ipsam commodi perspiciatis, impedit eaque ratione?</p>
               </div>
-              <div role="tabpanel" :class="{ actif: estOuvert === 3 }" class=".panel">
+              <div role="tabpanel" :class="{ 'active': estOuvert === 3 }" class="panel">
                 <h1>Panneau 3</h1>
                 <p>Nulla, voluptatem fuga autem, qui nemo incidunt hic dignissimos obcaecati ea soluta iure nostrum quae deserunt, fugit nesciunt voluptas animi. Molestiae, perspiciatis quisquam. Perferendis excepturi accusantium ea perspiciatis nobis sapiente.</p>
               </div>
@@ -66,30 +62,3 @@
         </body>
       </html>
 
-<body>
-  <h1>Onglets</h1>
-  <div id="onglets" x-data="{ isOpen : 0, }">
-    <ul role="tablist">
-      <li role="tab" class="tab" :class="{ 'active': isOpen === 1 }" @click="isOpen = 1">Onglet 1</li>
-      <li role="tab" class="tab" :class="{ 'active': isOpen === 2 }" @click="isOpen = 2">Onglet 2</li>
-      <li role="tab" class="tab" :class="{ 'active': isOpen === 3 }" @click="isOpen = 3">Onglet 3</li>
-    </ul>
-    <div class="panels">
-      <div role="tabpanel" class="panel" :class="{ 'active': isOpen === 1 }">
-        <h1>Panneau 1</h1>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-      </div>
-      <div role="tabpanel" class="panel" :class="{ 'active': isOpen === 2 }">
-        <h1>Panneau 2</h1>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-      </div>
-      <div role="tabpanel" class="panel" :class="{ 'active': isOpen === 3 }">
-        <h1>Panneau 3</h1>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-      </div>
-    </div>
-  </div>
-  </ul>
-</body>
-
-</html>
