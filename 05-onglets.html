@@ -13,25 +13,33 @@
       <ul role="tablist">
         
         <section >
-        <button @click="ouvert = 1">1</button>
-        <li role="tab" x-show="ouvert === 1">Onglet 1</li>
+        <button @click="ouvert = 1"> Onglet 1</button>
+        <li role="tab" x-show="ouvert === 1">Panneau 1</li>
         </section>
        
         <section >
-        <button @click="ouvert = 2">2</button>
-        <li role="tab" x-show="ouvert === 2">Onglet 2</li>
+        <button @click="ouvert = 2"> Onglet 2</button>
+        <li role="tab" x-show="ouvert === 2">Panneau 2</li>
         </section>
         
         <section >
-        <button @click="ouvert = 3"> 3</button>
-        <li role="tab" x-show="ouvert === 3">Onglet 3</li>
+        <button @click="ouvert = 3"> Onglet 3</button>
+        <li role="tab" x-show="ouvert === 3">Panneau 3</li>
         </section>
-        
-        <section >
-        <button @click="ouvert = 4">4</button>
-        <li role="tab" x-show="ouvert === 4">Onglet 4</li>
-        </section>
-      
+        <div>
+          <div role="tabpanel" x-show="ouvert === 1">
+            <h1>Panneau 1</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur et aliquam magnam aut dolor error pariatur iure ad totam iusto voluptatem consequuntur harum delectus quisquam accusamus dolore in, magni eius.</p>
+          </div>
+          <div role="tabpanel" x-show="ouvert === 2">
+            <h1>Panneau 2</h1>
+            <p>Excepturi iste, pariatur sint quo nulla nisi placeat. Id fugit aliquam esse dicta reprehenderit corporis officia consectetur voluptates debitis nihil placeat, iure itaque nobis ipsam commodi perspiciatis, impedit eaque ratione?</p>
+          </div>
+          <div role="tabpanel" x-show="ouvert === 3">
+            <h1>Panneau 3</h1>
+            <p>Nulla, voluptatem fuga autem, qui nemo incidunt hic dignissimos obcaecati ea soluta iure nostrum quae deserunt, fugit nesciunt voluptas animi. Molestiae, perspiciatis quisquam. Perferendis excepturi accusantium ea perspiciatis nobis sapiente.</p>
+          </div>
+        </div>
       </ul>
    </body>
 </html>
